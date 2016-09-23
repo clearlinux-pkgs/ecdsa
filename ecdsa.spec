@@ -4,7 +4,7 @@
 #
 Name     : ecdsa
 Version  : 0.13
-Release  : 17
+Release  : 18
 URL      : https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.13.tar.gz
 Source0  : https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.13.tar.gz
 Summary  : ECDSA cryptographic signature library (pure python)
