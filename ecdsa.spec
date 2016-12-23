@@ -4,7 +4,7 @@
 #
 Name     : ecdsa
 Version  : 0.13
-Release  : 21
+Release  : 22
 URL      : https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.13.tar.gz
 Source0  : https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.13.tar.gz
 Summary  : ECDSA cryptographic signature library (pure python)
@@ -39,18 +39,14 @@ python components for the ecdsa package.
 %setup -q -n ecdsa-0.13
 
 %build
+export LANG=C
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd py2 ; py.test-2.7 ; popd
 %install
 rm -rf %{buildroot}
-python2 setup.py build -b py2 install --root=%{buildroot}
-python3 setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot}
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
