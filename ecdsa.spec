@@ -4,13 +4,14 @@
 #
 Name     : ecdsa
 Version  : 0.13
-Release  : 27
+Release  : 28
 URL      : http://pypi.debian.net/ecdsa/ecdsa-0.13.tar.gz
 Source0  : http://pypi.debian.net/ecdsa/ecdsa-0.13.tar.gz
 Summary  : ECDSA cryptographic signature library (pure python)
 Group    : Development/Tools
 License  : MIT
 Requires: ecdsa-legacypython
+Requires: ecdsa-python3
 Requires: ecdsa-python
 BuildRequires : openssl-dev
 BuildRequires : pbr
@@ -31,6 +32,7 @@ BuildRequires : setuptools
 %package legacypython
 Summary: legacypython components for the ecdsa package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the ecdsa package.
@@ -40,9 +42,19 @@ legacypython components for the ecdsa package.
 Summary: python components for the ecdsa package.
 Group: Default
 Requires: ecdsa-legacypython
+Requires: ecdsa-python3
 
 %description python
 python components for the ecdsa package.
+
+
+%package python3
+Summary: python3 components for the ecdsa package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the ecdsa package.
 
 
 %prep
@@ -53,12 +65,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505362421
+export SOURCE_DATE_EPOCH=1507153395
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505362421
+export SOURCE_DATE_EPOCH=1507153395
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -74,5 +86,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
