@@ -18,7 +18,7 @@ BuildRequires : pip
 BuildRequires : py
 BuildRequires : pyOpenSSL
 BuildRequires : pytest
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
