@@ -4,7 +4,7 @@
 #
 Name     : ecdsa
 Version  : 0.13.2
-Release  : 46
+Release  : 47
 URL      : http://pypi.debian.net/ecdsa/ecdsa-0.13.2.tar.gz
 Source0  : http://pypi.debian.net/ecdsa/ecdsa-0.13.2.tar.gz
 Summary  : ECDSA cryptographic signature library (pure python)
