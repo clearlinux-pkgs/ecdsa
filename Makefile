@@ -1,5 +1,5 @@
 PKG_NAME := ecdsa
-URL = https://files.pythonhosted.org/packages/8c/d8/9c3596fd0f18ae0a76333492a119c00183323d8e64de1a4f4bd642856963/ecdsa-0.13.3.tar.gz
+URL = https://files.pythonhosted.org/packages/b0/9e/dffa648ea8f2bc9e58e96a9fcb8702c4b4f520047071b257acfb41d6924f/ecdsa-0.14.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
