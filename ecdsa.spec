@@ -4,7 +4,7 @@
 #
 Name     : ecdsa
 Version  : 0.15
-Release  : 53
+Release  : 54
 URL      : https://files.pythonhosted.org/packages/e3/7c/b508ade1feb47cd79222e06d85e477f5cfc4fb0455ad3c70eb6330fc49aa/ecdsa-0.15.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e3/7c/b508ade1feb47cd79222e06d85e477f5cfc4fb0455ad3c70eb6330fc49aa/ecdsa-0.15.tar.gz
 Summary  : ECDSA cryptographic signature library (pure python)
@@ -49,6 +49,7 @@ python components for the ecdsa package.
 Summary: python3 components for the ecdsa package.
 Group: Default
 Requires: python3-core
+Provides: pypi(ecdsa)
 
 %description python3
 python3 components for the ecdsa package.
@@ -63,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578152528
+export SOURCE_DATE_EPOCH=1582921234
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
