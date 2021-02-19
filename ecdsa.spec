@@ -4,7 +4,7 @@
 #
 Name     : ecdsa
 Version  : 0.16.1
-Release  : 61
+Release  : 62
 URL      : https://files.pythonhosted.org/packages/1d/d4/0684a83b3c16a9d1446ace27a506cef1db9b23984ac7ed6aaf764fdd56e8/ecdsa-0.16.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1d/d4/0684a83b3c16a9d1446ace27a506cef1db9b23984ac7ed6aaf764fdd56e8/ecdsa-0.16.1.tar.gz
 Summary  : ECDSA cryptographic signature library (pure python)
